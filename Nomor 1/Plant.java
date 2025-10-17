@@ -12,7 +12,7 @@ public class Plant {
             }
         } else if (d instanceof Zombie) {
             Zombie zombie = (Zombie) d;
-            if (zombie.health > 0) {
+            if (zombie.getHealth() > 0) {
                 d.destroyed();
             } else {
                 System.out.println(zombie.getClass().getSimpleName() + " sudah kalah.");

@@ -1,4 +1,4 @@
-public abstract class Zombie implements Destroyable {
+public abstract class Zombie extends Destroyable {
     protected int health;
     protected int level;
 
@@ -9,8 +9,7 @@ public abstract class Zombie implements Destroyable {
 
     public abstract void heal();
 
-    @Override
-    public abstract void destroyed();
+    public abstract void destroyed(); 
 
     public String getZombieInfo() {
         return "Jenis: " + this.getClass().getSimpleName() + 
@@ -18,13 +17,19 @@ public abstract class Zombie implements Destroyable {
                "\n  Level: " + this.level;
     }
 
-    @Override
-    public String getDestroyableInfo() {
-        return getZombieInfo();
+    public int getHealth() {
+        return health;
+    }
+    
+    public void setHealth(int health) {
+        this.health = health;
     }
 
-    // Getter for health so other classes (like Tester) can access it
-    public int getHealth() {
-        return this.health;
+    public int getLevel() {
+        return level;
+    }
+
+    public String getDestroyableInfo() {
+        return getZombieInfo();
     }
 }

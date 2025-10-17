@@ -1,4 +1,4 @@
-public class Barrier implements Destroyable {
+public class Barrier extends Destroyable {
     private int strength;
 
     public Barrier(int strength) {
@@ -13,7 +13,6 @@ public class Barrier implements Destroyable {
         return strength;
     }
 
-    @Override
     public void destroyed() {
         this.strength -= 9;
         System.out.println("Barrier diserang. Strength berkurang 9. Strength saat ini: " + this.strength);
@@ -28,7 +27,6 @@ public class Barrier implements Destroyable {
         return "Jenis: Barrier\n  Strength: " + this.strength;
     }
     
-    @Override
     public String getDestroyableInfo() {
         return getBarrierInfo();
     }
