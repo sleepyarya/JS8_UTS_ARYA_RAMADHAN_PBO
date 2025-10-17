@@ -22,4 +22,9 @@ public abstract class Zombie implements Destroyable {
     public String getDestroyableInfo() {
         return getZombieInfo();
     }
+
+    // Getter for health so other classes (like Tester) can access it
+    public int getHealth() {
+        return this.health;
+    }
 }
